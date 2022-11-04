@@ -23,13 +23,30 @@ conda env create --force --file environment.yml
 conda activate periscope_2022
 ```
 
+## Replicating our workflow
+
+All of our data is publicly available so that our entire workflow can be replicated.
+However, many of the processing steps require significant computational resources and cannot be replicated on an average personal computer.
+To address this, we have provided many intermediate files.
+Input images, intermediate processed images, and the final images used for analysis are available as described in [Downloading images](#downloading-images).
+Input profiles, intermediate processed profiles, and the final profiles used for analysis are available as described in [Downloading profiles](#downloading-profiles).
+
+Each folder in this repository contains the input files used, logical intermediates generated, and/or a README file describing how to download any that are too large for the repository.
+
+We have described a minimal example you can use, where possible, to practice using our workflow.
+However, it is very important to understand that extracting meaningful biology is only possible at scale so any minimal examples are to be used for technical but not biological understanding.
+
 ## Downloading data
 
-Cell Painting images and profiles are available at the Cell Painting Gallery on the Registry of Open Data on AWS (https://registry.opendata.aws/cellpainting-gallery/) under accession number `cpg0021-periscope`. 
+Cell Painting images and profiles are available at the Cell Painting Gallery on the Registry of Open Data on AWS (https://registry.opendata.aws/cellpainting-gallery/) under accession number `cpg0021-periscope`.
 Detailed download and file organization information for the Cell Painting Gallery are available at https://github.com/broadinstitute/cellpainting-gallery.
 
-A549 data is labeled as batch `20200805_A549_WG_Screen`.
-HeLa data is labeled as batch `20210422_HeLa_WG_Screen`.
+A549 data is labeled as batch `20200805_A549_WG_Screen` and may also be referred to as `CP186` in some file names.
+
+HeLa data is labeled as batch `20210422_HeLa_WG_Screen` and may also be referred to a `CP257` in some file names.
+DMEM and HPLM conditions were separated by plate.
+DMEM plates are 'CP257A','CP257B','CP257D','CP257F', and 'CP257H'.
+HPLM_plates are 'CP257J','CP257K','CP257L', and 'CP257N'.
 
 ### Downloading images
 
@@ -53,7 +70,7 @@ aws s3 cp \
 ##### Cell Painting
 Within each plate folder, Cell Painting images are organized into a single folder labeled 20X_CP_${plate}.
 Each 6-well plate contains images from 1364 (for A549 screen) or 1332 (for HeLa screen) sites for each well.
-There is 1 .nd2 file per site with five fluorescent images (DAPI, GFP, A594, Cy5, 750) corresonding to the cell painting images.
+There is 1 .nd2 file per site with five fluorescent images (DAPI, GFP, A594, Cy5, 750) corresponding to the cell painting images.
 Sites have a 10% overlap.
 
 ##### Barcoding
@@ -109,7 +126,7 @@ aws s3 cp \
 
 
 #### `images_corrected_cropped`
-`images_corrected_cropped` contains stitched and cropped pseudo-site images where the pseudo-site corresponds between Cell Painting and Barcoding images. 
+`images_corrected_cropped` contains stitched and cropped pseudo-site images where the pseudo-site corresponds between Cell Painting and Barcoding images.
 These are the images used in the final analysis pipeline.
 Within the `images_corrected` folder, images are saved in folders by plate_well.
 The images can be downloaded using the command
@@ -128,4 +145,62 @@ aws s3 cp \
 
 ### Downloading profiles
 
-TO BE FILLED IN
+Image-based profiles were generated using the Pooled Cell Painting [Profiling Template](https://github.com/broadinstitute/pooled-cell-painting-profiling-template) and [Profiling Recipe](https://github.com/broadinstitute/pooled-cell-painting-profiling-recipe).
+Configuration for A549 profile generation is found in [this repository](https://github.com/broadinstitute/CP186-A549-WG).
+Configuration for HeLa profile generation is found in [this repository](https://github.com/broadinstitute/CP257-HeLa-WG).
+
+Find listed below the filenames for all of the profiles generated.
+
+| Dataset | Aggregate_Method | Aggregate_Level | Aggregate_Group | Normalize | Feature_Select | Second_Aggregate_Method | Second_Aggregate_Level | Second_Normalize | Third_Aggregate_Method | Third_Aggregate_Level | File_Name |
+|----|----|----|----|----|----|----|----|----|----|----|----|
+| A549 | Median | Gene  | Plate | N | N | N | N | N | N | N | 20200805_A549_WG_Screen_gene_ALLBATCHES___{PLATE}___ALLWELLS.csv.gz |
+| A549 | Median | Gene  | Plate | Standardize | N | N | N | N | N | N | 20200805_A549_WG_Screen_gene_normalized_ALLBATCHES___{PLATE}___ALLWELLS.csv.gz |
+| A549 | Median | Guide | Plate | N | N | N | N | N | N | N | 20200805_A549_WG_Screen_guide_ALLBATCHES___{PLATE}___ALLWELLS.csv.gz |
+| A549 | Median | Guide | Plate | Standardize | N | N | N | N | N | N | 20200805_A549_WG_Screen_guide_normalized_ALLBATCHES___{PLATE}___ALLWELLS.csv.gz |
+| A549 | Median | Guide | Plate | Standardize | N | Median | Y | N | N | N | 20200805_A549_WG_Screen_guide_normalized_median_merged_ALLBATCHES_ALLWELLS.csv.gz |
+| HeLa | Median | Guide | Plate | N | N | N | N | N | N | N | 20210422_6W_CP257_guide_ALLBATCHES___{PLATE}___ALLWELLS.csv |
+| HeLa | Median | Gene  | Plate | N | N | N | N | N | N | N | 20210422_6W_CP257_gene_ALLBATCHES___{PLATE}___ALLWELLS.csv |
+| HeLa | Median | Gene  | Plate | Standardize | N | N | N | N | N | N | 20210422_6W_CP257_gene_normalized_ALLBATCHES___{PLATE}___ALLWELLS.csv |
+| HeLa | Median | Guide | Plate | Standardize | N | N | N | N | N | N | 20210422_6W_CP257_guide_normalized_ALLBATCHES___{PLATE}___ALLWELLS.csv |
+| HeLa | Median | Guide | Plate | Standardize | N | Median | DMEM | N | N | N | 20210422_6W_CP257_guide_normalized_median_merged_ALLBATCHES___DMEM___ALLWELLS.csv |
+| HeLa | Median | Guide | Plate | Standardize | N | Median | HPLM | N | N | N | 20210422_6W_CP257_guide_normalized_median_merged_ALLBATCHES___HPLM___ALLWELLS.csv |
+
+
+Download profiles using the following command
+Note that `filehead` is the filename before the first `___`.
+```bash
+dataset=HeLa
+filehead=20200805_A549_WG_Screen_gene_ALLBATCHES
+aws s3 cp \
+  --no-sign-request \
+  s3://cellpainting-gallery/cpg0021-periscope/broad/workspace/profiles/${dataset} . \
+  --exclude "*" \
+  --include "${filehead}*"
+```
+
+#### `single cell profiles`
+
+The HeLa dataset has the additional resource of single cell profiles, available on a per-plate or per-guide basis.
+
+Download per-plate single cell profiles using the following command.
+```bash
+dataset=HeLa
+aws s3 cp \
+  --no-sign-request \
+  --recursive \
+  s3://cellpainting-gallery/cpg0021-periscope/broad/workspace/profiles/${dataset}/single_cell/ . \
+```
+
+Download per-guide single cell profiles using the following command.
+Note that you can enter a specific guide (e.g. `AAAAAAAACCCACCTTTCCG`) or a gene name (e.g. `HSPA8`) to download data for all four of its guides.
+While single cell by-guide profiles are relatively small, download may be slow as the download command has to list the whole folder.
+```bash
+dataset=HeLa
+guide=AAAAAAAACCCACCTTTCCG
+aws s3 cp \
+  --no-sign-request \
+  --recursive \
+  s3://cellpainting-gallery/cpg0021-periscope/broad/workspace/profiles/${dataset}/single_cell/ . \
+  --exclude "*"
+  --include "*${guide}*"
+```
