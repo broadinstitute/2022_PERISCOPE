@@ -21,6 +21,8 @@ dependencies:
 - conda-forge::umap-learn
 - conda-forge::hdbscan
 - conda-forge::joblib==1.1.0
+- conda-forge::scikit-image
+- conda-forge::imageio
 - pip
 - pip:
   - git+https://github.com/cytomining/pycytominer@fdd0e0935ab5446f5c3710e5270c5234d8ef18f1
