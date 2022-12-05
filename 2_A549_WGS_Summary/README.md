@@ -10,3 +10,7 @@ Before running this notebook, you will also need to run the [Hit_Calling]('../Hi
 Alternatively, you can directly download the file using the following command:
 ```bash
 aws s3 cp --no-sign-request s3://cellpainting-gallery/cpg-0021-periscope/broad/workspace/profiles/
+```
+
+Already included in the `inputs` folder are the following files:
+`CORUM_allComplexes.txt` was downloaded from
