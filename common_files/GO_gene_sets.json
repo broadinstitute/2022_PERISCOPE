@@ -318,27 +318,7 @@
         "TOMM70"
     ],
     "Cortical Cytoskeleton": [
-        "TOMM40",
-        "MTX2",
-        "IMMT",
-        "APOOL",
-        "SAMM50",
-        "HSPA9",
-        "MTX3",
-        "TOMM20L",
-        "TOMM5",
-        "MTX1",
-        "TOMM7",
-        "CHCHD3",
-        "MFN1",
-        "DNAJC11",
-        "TOMM22",
-        "APOO",
-        "TOMM40L",
-        "CHCHD6",
-        "TOMM20",
-        "TOMM70"
-    ],
+        "CDH2","MYZAP","ACTR2","FLOT1","MAEA","DLC1","RAPGEF3","CAP1","CIB2","DSTN","CORO1A","AKAP13","MISP","PLEKHH2","SHROOM1","KNCN","DBN1","DLG4","DMD","EEF1A1","CTTN","EPB41","EPB41L2","EPB42","DMTN","MAPRE1","RIMS1","ERC1","FLOT2","COBL","CLASP1","COTL1","MYRIP","NSMF","ERC2","PCLO","DBNL","GSN","GYPC","GYS2","HCLS1","SHROOM2","KRT19","LASP1","LLGL2","LLGL1","MOBP","MPP1","MYH9","MYO1A","MYO1E","NF2","NOS2","NUMA1","PJVK","SPTBN5","SNX9","PLS1","ANLN","PPP1R9A","PRKCB","LANCL2","SHROOM4","SHROOM3","SPTBN4","PVALB","TRPV4","RDX","ACTB","RTKN","SELE","SLC2A1","SLC4A1","SPTA1","SPTAN1","SPTB","SPTBN1","SPTBN2","TMOD1","CLDN5","TPM4","TRPC4","UTRN","EZR","MLPH","CALB1","CALD1","MED28","ACTN4","CAPN2","CAPZA2","CAPZB","PPP1R9B","ACTN1","ACTN2","IQGAP1","ACTN3","BSN","WASL","FCHSD1","MYADM","CAPZA3","RIMS2","RIMS3","WDR1","CDH1"],
     "DNA Polymerase Complex": [
         "MAD2L2",
         "POLD3",
