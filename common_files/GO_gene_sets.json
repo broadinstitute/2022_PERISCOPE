@@ -247,7 +247,7 @@
         "TMEM109",
         "TSPYL5"
     ],
-    "Vacuolar-type_ATPase": [
+    "Vacuolar-type ATPase": [
         "ATP6V0A1",
         "ATP6V0A2",
         "ATP6V0A4",
@@ -271,7 +271,7 @@
         "ATP6V1G3",
         "ATP6V1H"
     ],
-    "Protein_O-mannosylation": [
+    "Protein O-mannosylation": [
         "RXYLT1",
         "POMT1",
         "B4GAT1",
@@ -295,7 +295,7 @@
         "DPM2",
         "LARGE1"
     ],
-    "Outer_Mitochondrial_Membrane_Protein_Complex": [
+    "Outer Mitochondrial Membrane Protein Complex": [
         "TOMM40",
         "MTX2",
         "IMMT",
@@ -317,29 +317,9 @@
         "TOMM20",
         "TOMM70"
     ],
-    "Cortical_Cytoskeleton": [
-        "TOMM40",
-        "MTX2",
-        "IMMT",
-        "APOOL",
-        "SAMM50",
-        "HSPA9",
-        "MTX3",
-        "TOMM20L",
-        "TOMM5",
-        "MTX1",
-        "TOMM7",
-        "CHCHD3",
-        "MFN1",
-        "DNAJC11",
-        "TOMM22",
-        "APOO",
-        "TOMM40L",
-        "CHCHD6",
-        "TOMM20",
-        "TOMM70"
-    ],
-    "DNA_Polymerase_Complex": [
+    "Cortical Cytoskeleton": [
+        "CDH2","MYZAP","ACTR2","FLOT1","MAEA","DLC1","RAPGEF3","CAP1","CIB2","DSTN","CORO1A","AKAP13","MISP","PLEKHH2","SHROOM1","KNCN","DBN1","DLG4","DMD","EEF1A1","CTTN","EPB41","EPB41L2","EPB42","DMTN","MAPRE1","RIMS1","ERC1","FLOT2","COBL","CLASP1","COTL1","MYRIP","NSMF","ERC2","PCLO","DBNL","GSN","GYPC","GYS2","HCLS1","SHROOM2","KRT19","LASP1","LLGL2","LLGL1","MOBP","MPP1","MYH9","MYO1A","MYO1E","NF2","NOS2","NUMA1","PJVK","SPTBN5","SNX9","PLS1","ANLN","PPP1R9A","PRKCB","LANCL2","SHROOM4","SHROOM3","SPTBN4","PVALB","TRPV4","RDX","ACTB","RTKN","SELE","SLC2A1","SLC4A1","SPTA1","SPTAN1","SPTB","SPTBN1","SPTBN2","TMOD1","CLDN5","TPM4","TRPC4","UTRN","EZR","MLPH","CALB1","CALD1","MED28","ACTN4","CAPN2","CAPZA2","CAPZB","PPP1R9B","ACTN1","ACTN2","IQGAP1","ACTN3","BSN","WASL","FCHSD1","MYADM","CAPZA3","RIMS2","RIMS3","WDR1","CDH1"],
+    "DNA Polymerase Complex": [
         "MAD2L2",
         "POLD3",
         "POLG2",
@@ -373,7 +353,7 @@
         "GDF6",
         "BMPR2"
     ],
-    "GOCC_RIBONUCLEOPROTEIN_COMPLEX": [
+    "RIBONUCLEOPROTEIN_COMPLEX": [
         "GNL3L",
         "ABT1",
         "DDX54",
@@ -550,5 +530,7 @@
         "TAX1BP3",
         "RGS11",
         "SOD1"
-    ]
+    ],
+    "TRANSLATIONAL_INITIATION": ["EIF3D","EIF4A1","TPR","EIF3CL","EIF3G","EIF3I","EIF4H","EIF3B","NCBP2"],
+    "Chaperone Complex": ["RUVBL2","CCT7","CCT3","PTGES3","CCT5","SPAG1","CCT2","DNAJC9","CDC37","CCT8","TCP1","CCT6B","STUB1","DNAJB11","RUVBL1","CCT6A","SDF2L1","BAG3","SDF2","HSPA8","PSMG1","TSC1","HSF1","DNAAF2","BAG2","PSMG2","HSPB8","CCT4","PPP5C","HSP90AB1","PIH1D2","STIP1"]
 }
