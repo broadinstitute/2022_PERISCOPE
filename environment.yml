@@ -19,3 +19,4 @@ dependencies:
 - pip:
   - git+https://github.com/cytomining/pycytominer@ea9873ddd3b7d9b7072cf7fc55d582012cf6d315
   - cytominer_eval==0.1
+  - gseapy==1.0.3
