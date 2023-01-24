@@ -22,8 +22,8 @@ aws s3 cp --recursive --no-sign-request s3://cellpainting-gallery/cpg-0021-peris
 
 The other file used in generating this data is included in the repository and is as follows:  
 `CCLE_expression_A549_HeLa.csv` is granular gene expression data for HeLa and A549 cells, subsetted from `CCLE_expression.csv`, downloaded from the Broad Institute DepMap portal at https://depmap.org/.
-This .csv was generated from the `DepMap Public 22Q2` view and downloaded from [this link](https://ndownloader.figshare.com/files/34989919).
-Samples were mapped in `CCLE_expression.csv` using `sample_info.csv` downloaded from [this link](https://ndownloader.figshare.com/files/35020903) and the folowing code:  
+This .csv was generated from the `DepMap Public 21Q4` view and downloaded from [this link](https://depmap.org/portal/download/all/?releasename=DepMap+Public+21Q4&filename=CCLE_expression.csv).
+Samples were mapped in `CCLE_expression.csv` using `sample_info.csv` downloaded from [this link](https://depmap.org/portal/download/all/?releasename=DepMap+Public+21Q4&filename=sample_info.csv) and the folowing code:  
 ```python3
 HeLa_alias = sample_info.loc[sample_info["stripped_cell_line_name"] == 'HELA', "DepMap_ID"].squeeze()
 A549_alias = sample_info.loc[sample_info["stripped_cell_line_name"] == 'A549', "DepMap_ID"].squeeze()
