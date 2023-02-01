@@ -12,5 +12,7 @@ source,
 spots_per_oligo,
 subpool
 
-`GO_gene_sets.json` is a dictionary of gene group names and the genes within as described by the Gene Ontology Resource and accessed from http://geneontology.org.
-It is used at multiple points for functinoal classification of groups of genes.
+`annotated_gene_sets.json` is a dictionary of gene group names (e.g. signaling pathways, protein clusters) and the genes within. 
+These were manually curated by biologists. 
+Most used the Gene Ontology Resource accessed from http://geneontology.org or the Kegg Pathway Database from https://www.genome.jp/kegg/pathway.html as a starting point.
+It is used at multiple points for functional classification of groups of genes.
