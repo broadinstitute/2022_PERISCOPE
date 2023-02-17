@@ -11,7 +11,7 @@ aws s3 cp --recursive --no-sign-request s3://cellpainting-gallery/cpg0021-perisc
 Before running this notebook, you will also need to run the [Hit_Calling]('../Hit_Calling/per_feature_hit_calling.ipynb') notebook which will calculate p-values for each feature.
 Alternatively, you can directly download the file using the following command:
 ```bash
-aws s3 cp --recursive --no-sign-request s3://cellpainting-gallery/cpg0021-periscope/broad/workspace/publication_data/2022_PERISCOPE ..Hit_Calling/outputs/ --exclude "*" --include "*_mann_whitney_*"
+aws s3 cp --recursive --no-sign-request s3://cellpainting-gallery/cpg0021-periscope/broad/workspace/publication_data/2022_PERISCOPE ../Hit_Calling/outputs/ --exclude "*" --include "*_mann_whitney_*"
 ```
 
 ## Other inputs
