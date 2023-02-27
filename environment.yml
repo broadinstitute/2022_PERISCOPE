@@ -15,6 +15,7 @@ dependencies:
 - conda-forge::joblib=1.2.0
 - conda-forge::scikit-image=0.19.3
 - conda-forge::imageio=2.22.4
+- conda-forge::scipy==1.8.0
 - pip
 - pip:
   - git+https://github.com/cytomining/pycytominer@ea9873ddd3b7d9b7072cf7fc55d582012cf6d315
