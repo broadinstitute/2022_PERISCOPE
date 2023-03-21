@@ -1,8 +1,8 @@
-This notebook generates the analysis and figure described in Figure 2.
+This notebook generates the analysis and figure described in this Supplementary Figure.
 
 ## Before running this notebook
 
-Before running this notebook, you will need to run the [Hit_Calling]('../Hit_Calling/per_feature_hit_calling.ipynb') notebook which will calculate p-values for each feature.
+Before running this notebook, you will need to run the [Hit_Calling](../Hit_Calling/per_feature_hit_calling.ipynb) notebook which will calculate p-values for each feature.
 Alternatively, you can directly download the files using the following command:
 
 ```bash
@@ -10,6 +10,10 @@ aws s3 cp --recursive --no-sign-request s3://cellpainting-gallery/cpg0021-perisc
 ```
 
 ## Other inputs
+
+This notebook uses inputs generated during the creation of [Figure 2](../2_A549_WGS_Summary/Figure_2.ipynb) and [Figure 3](../3_HELA_WGS_Summary/Figure_3.ipynb) that are available in this repository.
+
+A549 genetic dependencies were downloaded as described in [Figure 2 README](../2_A549_WGS_Summary/README.md).
 
 HeLa genetic dependencies estimated using the DEMETER2 model were downloaded [at this link](https://figshare.com/ndownloader/files/13515395), Version 6, 2020-04-09 release and saved as `D2_combined_gene_dep_scores.csv`.
 To simplify use, we filtered the data to `HeLa` only using the following script and saved it as `D2_combined_gene_dep_scores_HeLa.csv`.
