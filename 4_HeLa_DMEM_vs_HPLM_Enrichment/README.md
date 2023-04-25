@@ -14,20 +14,16 @@ To run this notebook you will also first need to run [Hit_Calling](../Hit_Callin
 
 If you would like to skip running Hit Calling, you can directly download the outputs with the following command:
 ```bash
-aws s3 cp --recursive --no-sign-request s3://cellpainting-gallery/cpg0021-periscope/broad/workspace/XXXXXXX ../outputs/ --exclude "*" --include "*_mann_whitney_*"
+aws s3 cp --recursive --no-sign-request s3://cellpainting-gallery/cpg0021-periscope/broad/workspace/publication_data/2022_PERISCOPE ../outputs/ --exclude "*" --include "*_mann_whitney_*"
 ```
 
-The other file used in generating this data is included in the repository and is `CCLE_expression_A549_HeLa.csv`. Details of this file are explained in the [README.md for Hit Calling](../Hit_Calling/README.md).
+The other file used in generating this data is included in the repository and is `CCLE_expression_A549_HeLa.csv`. 
+Details of this file are explained in the [README.md for Hit Calling](../Hit_Calling/README.md).
 
-The Preranked GSEA analyis was performed Separately based on the morphological signal score calculated by this notebook. The output files used for this analysis are ranked lists in the .rnk format:
-`HeLa_DMEM_all_genes.rnk`
-`HeLa_HPLM_all_genes.rnk`
+The Preranked GSEA analysis was performed separately in GSEA 4.2.3 software (available for downloaded here: https://www.gsea-msigdb.org/gsea/downloads.jsp).Morphological signal scores used as inputs to GSEA were calculated by this notebook and available as [`HeLa_DMEM_all_genes.rnk`](outputs/HeLa_DMEM_all_genes.rnk) and [`HeLa_HPLM_all_genes.rnk`](outputs/HeLa_HPLM_all_genes.rnk).
 
-The GSEA 4.2.3 software was used and can be downloaded here:
-https://www.gsea-msigdb.org/gsea/downloads.jsp
-
-Parameters used for the Preranked GSEA analyis:
-Gene sets database = c5.go.bp.v2023.1.Hs.symbols.gmt
-Number of permutations = 2000
-Max size:exclude larger sets = 500
+Parameters used for the Preranked GSEA analyis:  
+Gene sets database = c5.go.bp.v2023.1.Hs.symbols.gmt  
+Number of permutations = 2000  
+Max size:exclude larger sets = 500  
 Min size:exclude smaller sets = 15
