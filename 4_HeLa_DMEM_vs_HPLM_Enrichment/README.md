@@ -18,3 +18,16 @@ aws s3 cp --recursive --no-sign-request s3://cellpainting-gallery/cpg0021-perisc
 ```
 
 The other file used in generating this data is included in the repository and is `CCLE_expression_A549_HeLa.csv`. Details of this file are explained in the [README.md for Hit Calling](../Hit_Calling/README.md).
+
+The Preranked GSEA analyis was performed Separately based on the morphological signal score calculated by this notebook. The output files used for this analysis are ranked lists in the .rnk format:
+`HeLa_DMEM_all_genes.rnk`
+`HeLa_HPLM_all_genes.rnk`
+
+The GSEA 4.2.3 software was used and can be downloaded here:
+https://www.gsea-msigdb.org/gsea/downloads.jsp
+
+Parameters used for the Preranked GSEA analyis:
+Gene sets database = c5.go.bp.v2023.1.Hs.symbols.gmt
+Number of permutations = 2000
+Max size:exclude larger sets = 500
+Min size:exclude smaller sets = 15
