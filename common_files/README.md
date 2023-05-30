@@ -2,17 +2,15 @@
 
 ## Barcodes.csv
 
-`Barcodes.csv` is the 
-The columns within are as described:
-design,
-dialout,
-gene_id,
-gene_symbol,
-oligo,
-sgRNA,
-source,
-spots_per_oligo,
-subpool
+`Barcodes.csv` contains sgRNA sequences, gene identifiers, and metadata about guide design for our whole genome library.
+The columns within are as described:  
+design = an identifier for sub-pool libraries of nontargeting and targeting sgRNAs  
+dialout =  primer identifiers for oligo amplification  
+gene_id = gene information for each sgRNA  
+gene_symbol = gene information for each sgRNA  
+oligo = complete oligo sequences required for sgRNA amplification and cloning  
+sgRNA = the complete 20-nucleotide sgRNA sequence  
+source = the original library source for each sgRNA  
 
 ## annotated_gene_sets.json
 
