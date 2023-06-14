@@ -18,7 +18,8 @@ dependencies:
 - conda-forge::scipy==1.8.0
 - conda-forge::venn==0.1.3
 - conda-forge::goatools
-- conda-forge::wget
+- conda-forge::wget 
+- conda-forge::boto3==1.26.152
 - pip
 - pip:
   - git+https://github.com/cytomining/pycytominer@ea9873ddd3b7d9b7072cf7fc55d582012cf6d315

@@ -3,7 +3,7 @@ from matplotlib import image as mpimg
 import boto3
 import pandas as pd
 
-s3_client = boto3.client("s3")
+s3_client = boto3.client("s3",config=Config(signature_version=UNSIGNED))
 bucket_name = "cellpainting-gallery"
 
 def read_csv_gzip(path):
