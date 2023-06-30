@@ -5,6 +5,7 @@ dependencies:
 - conda-forge::python=3.9.15
 - conda-forge::pandas=1.5.2
 - conda-forge::numpy=1.23.5
+- conda-forge::numba=0.56.3
 - conda-forge::jupyter
 - conda-forge::jupyterlab
 - conda-forge::ipykernel=6.19.2
