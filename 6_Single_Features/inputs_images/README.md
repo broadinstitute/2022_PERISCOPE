@@ -1,2 +1,0 @@
-Images are single cells cropped from representative Cell Painting images from the ER and WGA channels as used in the final analysis pipeline.
-The single cell crops are used in the figure to illustrate Granularity erosions.
