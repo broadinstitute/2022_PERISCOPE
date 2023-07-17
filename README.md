@@ -1,10 +1,22 @@
-# 2022_PERISCOPE
-This repository contains supporting analyses and files for LEAD_AUTHOR et al. "PAPER TITLE".
+# 2022_Ramezani_Bauman_Singh_Weisbart_PERISCOPE
+This repository contains all supporting analyses and files for Ramezani, Bauman, Singh, and Weisbart, et al. "A genome-wide atlas of human cell morphology".
 It also includes download information for the images and profiles used in the analysis.
+It is currently under review for publication.
+It is available as a preprint at [LINK COMING SOON!]
+
+## Authors
+Meraj Ramezani*, Julia Bauman*, Avtar Singh*, Erin Weisbart*, John Yong, Maria Lozada, Greg P. Way, Sanam L. Kavari, Celeste Diaz, Marzieh Haghighi, Thiago M. Batista, Joaquín Pérez-Schindler, Melina Claussnitzer, Shantanu Singh, Beth A. Cimini, Paul C. Blainey‡, Anne E. Carpenter‡, Calvin H. Jan‡, James T. Neal‡
+*equal contribution
+‡co-senior authors
 
 ## Abstract
-
-ABSTRACT_TEXT
+A key challenge of the modern genomics era is developing data-driven representations of gene function. 
+Here, we present the first unbiased morphology-based genome-wide perturbation atlas in human cells, containing three genome-scale genotype-phenotype maps comprising >20,000 single-gene CRISPR-Cas9-based knockout experiments in >30 million cells. 
+Our optical pooled cell profiling approach (PERISCOPE) combines a de-stainable high-dimensional phenotyping panel (based on Cell Painting1,2) with optical sequencing of molecular barcodes and a scalable open-source analysis pipeline to facilitate massively parallel screening of pooled perturbation libraries. 
+This approach provides high-dimensional phenotypic profiles of individual cells, while simultaneously enabling interrogation of subcellular processes. 
+Our atlas reconstructs known pathways and protein-protein interaction networks, identifies culture media-specific responses to gene knockout, and clusters thousands of human genes by phenotypic similarity. 
+Using this atlas, we identify the poorly-characterized disease-associated transmembrane protein TMEM251/LYSET as a Golgi-resident protein essential for mannose-6-phosphate-dependent trafficking of lysosomal enzymes, showing the power of these representations. 
+In sum, our atlas and screening technology represent a rich and accessible resource for connecting genes to cellular functions at scale.
 
 ## Computational environment
 
