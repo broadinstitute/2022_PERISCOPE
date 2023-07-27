@@ -21,12 +21,10 @@ def handle_nans(
 
     """
 
-    print("cp_features:", len(cp_features))
     object_type_columns = df_input[cp_features].select_dtypes([object]).columns
     df_input[object_type_columns] = df_input[object_type_columns].apply(
         pd.to_numeric, errors="coerce"
     )
-
 
     cols2remove_manyNulls = [
         i
@@ -40,18 +38,8 @@ def handle_nans(
     )
 
     cols2removeCP = cols2remove_manyNulls + cols2remove_lowVars
-#     print("cols2remove_manyNulls", cols2remove_manyNulls)
-
-#     print("cols2remove_lowVars", cols2remove_lowVars)
 
     cp_features_analysis = list(set(cp_features) - set(cols2removeCP))
-    print(
-        "len cp_features_analysis/nan cols/low vars:",
-        len(cp_features_analysis),
-        len(cols2remove_manyNulls),
-        len(cols2remove_lowVars),
-    )
-
 
     df_p_s = df_input.drop(cols2removeCP, axis=1)
 
@@ -64,15 +52,11 @@ def handle_nans(
             :, cp_features_analysis
         ].interpolate()
     elif fill_na_method == "drop-rows":
-        print("before dropping nan rows: ", df_p_s.shape)
-        #         print('1',df_p_s.shape,df_p_s.dropna(subset=cp_features_analysis).reset_index(drop=True).shape)
         df_p_s = df_p_s.dropna(subset=cp_features_analysis).reset_index(drop=True)
-        print("after dropping nan rows: ", df_p_s.shape)
 
     elif (
         fill_na_method == "interpolate_sim_col"
     ):  # interpolate based on the columns with highest correlation
         print("Not implemented yet! Nothing got dropped! ")
-
 
     return df_p_s, cp_features_analysis

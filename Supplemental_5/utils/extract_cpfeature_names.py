@@ -4,8 +4,6 @@
 import pickle
 import pandas as pd
 
-################################################################################
-
 
 def extract_cpfeature_names(df_input):
     """

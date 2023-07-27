@@ -31,9 +31,7 @@ def edgeCellFilter(df_input, image_width=None, edge_margin=None):
             df_input.columns.str.contains("Width|ImageSize")
         ]
         if len(metadata_cols_4size):
-            #             print(metadata_cols_4size)
             image_width = df_input[metadata_cols_4size[0]].values[0]
-            print("image_width", image_width)
         else:
             raise Exception(
                 "No metadata columns for inferring image size are detected! Please enter edge_margin as an input!"
@@ -44,7 +42,6 @@ def edgeCellFilter(df_input, image_width=None, edge_margin=None):
             edge_margin = int(
                 np.percentile(df_input.Cells_AreaShape_MajorAxisLength.values, 80) / 2
             )
-            print("Inferred edge margin:", edge_margin)
         else:
             raise Exception(
                 "The Cells_AreaShape_MajorAxisLength column is not detected! Please enter image_width as an input!"

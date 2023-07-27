@@ -11,7 +11,9 @@ from . import handle_nans
 ################################################################################
 
 
-def extract_single_cell_samples(df_p_s, n_cells, cell_selection_method):
+def extract_single_cell_samples(
+    df_p_s, n_cells, cell_selection_method, platefilter=False
+):
     """
     This function select cells based on input cell_selection_method
 
@@ -38,9 +40,9 @@ def extract_single_cell_samples(df_p_s, n_cells, cell_selection_method):
         df_p_s, cp_features_analysis_0
     )
 
-    #     print("heloo")
-    #     print(cp_features)
     if cell_selection_method == "random":
+        if platefilter:
+            df_p_s = df_p_s.loc[df_p_s["Metadata_Foci_plate"].isin(platefilter)]
         dff = (
             df_p_s.reset_index(drop=True)
             .sample(n=n_cells, replace=False)
@@ -48,6 +50,8 @@ def extract_single_cell_samples(df_p_s, n_cells, cell_selection_method):
         )
 
     elif cell_selection_method == "representative":
+        if platefilter:
+            df_p_s = df_p_s.loc[df_p_s["Metadata_Foci_plate"].isin(platefilter)]
         df_p_s[cp_features_analysis] = df_p_s[cp_features_analysis].interpolate()
         if df_p_s.shape[0] > 60:
             n_cells_in_each_cluster_unif = 30
@@ -55,7 +59,7 @@ def extract_single_cell_samples(df_p_s, n_cells, cell_selection_method):
             n_cells_in_each_cluster_unif = int(df_p_s.shape[0] / 5)
 
         n_clusts = int(df_p_s.shape[0] / n_cells_in_each_cluster_unif)
-        kmeans = KMeans(n_clusters=n_clusts).fit(
+        kmeans = KMeans(n_clusters=n_clusts, n_init=10).fit(
             np.nan_to_num(df_p_s[cp_features_analysis].values)
         )
         clusterLabels = kmeans.labels_
@@ -73,6 +77,5 @@ def extract_single_cell_samples(df_p_s, n_cells, cell_selection_method):
             .sample(n=np.min([n_cells, df_ps.shape[0]]), replace=False)
             .reset_index(drop=True)
         )
-
 
     return dff, cp_features_analysis

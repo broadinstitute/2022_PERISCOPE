@@ -19,7 +19,6 @@ from . import read_from_gallery
 from skimage.util import img_as_ubyte, img_as_float
 
 
-
 def visualize_n_SingleCell_pooled(
     channels,
     sc_df,
@@ -32,7 +31,7 @@ def visualize_n_SingleCell_pooled(
     neigh_center_ls=[],
 ):
     """
-    This function plots the single cells correspoding to the input single cell dataframe
+    This function plots the single cells corresponding to the input single cell dataframe
 
     Inputs:
     ++ sc_df   (pandas df) size --> (number of single cells)x(columns):
@@ -54,9 +53,6 @@ def visualize_n_SingleCell_pooled(
     """
 
     halfBoxSize = int(boxSize / 2)
-    #     print(channels)
-
-    #     plt.ioff()
 
     columns_count = len(channels) + int(outline) + int(color)
     rows_count = sc_df.shape[0]
@@ -65,7 +61,6 @@ def visualize_n_SingleCell_pooled(
         rows_count, columns_count, figsize=(columns_count * 2, rows_count * 2)
     )
     if len(title) > 0:
-        print(title)
         f.suptitle(title)
 
     f.subplots_adjust(hspace=0, wspace=0)
@@ -105,7 +100,6 @@ def visualize_n_SingleCell_pooled(
             )
 
             imPath = ch_pName + "/" + ch_fName
-            # print(imPath)
             image = np.squeeze(read_from_gallery.read_image(imPath))
             if 1:
                 image = exposure.rescale_intensity(
@@ -116,7 +110,6 @@ def visualize_n_SingleCell_pooled(
             image_cropped = crop_cell.crop_single_cell_image(
                 image, xCenterC, yCenterC, halfBoxSize
             )
-            # print(image_cropped.shape, xCenter, yCenter, image_cropped.max())
 
             sc_collage_row[:, :, ci] = image_cropped
 
@@ -133,16 +126,13 @@ def visualize_n_SingleCell_pooled(
                 sc_collage_row[:, :, : len(channels)], channels
             )
 
-
             axarr[index, c + 1].imshow(color_im)
 
             if index == 0:
                 axarr[index, c + 1].set_title("composite")
 
         if outline:
-
             imPath = sc_df.loc[index, "Path_Outlines"]
-            # print(imPath)
             ov_im = read_resize_overlay_pooled(imPath, im_size)
 
             cell_outline = extract_cell_outline(ov_im)
@@ -171,7 +161,6 @@ def visualize_n_SingleCell_pooled(
             )
             axarr[0, columns_count - 1].set_title("cell outline")
 
-
         for c in range(columns_count):
             axarr[index, c].axes.xaxis.set_ticks([])
             axarr[index, c].axes.yaxis.set_ticks([])
@@ -185,18 +174,14 @@ def visualize_n_SingleCell_pooled(
             )
         else:
             imylabel = sc_df.loc[index, "Metadata_Foci_Barcode_MatchedTo_Barcode"][0:12]
-        #         print(imylabel)
         axarr[index, 0].set_ylabel(imylabel)
-
-    #     plt.ion()
     return f
 
 
 def read_resize_overlay_pooled(overlay_dir, orig_im_w):
     """
-    This function read and resizes overlay to the size of the original image
+    This function reads and resizes the overlay to the size of the original image
     """
-
 
     ov_im = resize(
         read_from_gallery.read_image(overlay_dir),
@@ -210,9 +195,6 @@ def read_resize_overlay_pooled(overlay_dir, orig_im_w):
 
 
 def extract_cell_outline(ov_im):
-    """
-    This function read and resizes overlay to the size of the original image
-    """
 
     if ov_im.dtype == np.uint8:
         cell_color = (255, 255, 255)
@@ -276,13 +258,16 @@ def colormask_cells_to_parent_cell_number(ov_im, cell_centers_df):
     return colored_cells
 
 
-def extract_neighbor_cells_center(df_p_s, df_samples, max_dist_of_neigh):
+def extract_neighbor_cells_center(df_p_s, df_samples, max_dist_of_neigh, channels):
     neigh_center_ls = []
     for i in range(df_samples.shape[0]):
         df_samples_0 = df_samples.loc[i]
 
         df_samples_0_neighs = df_p_s[
-            (df_p_s["PathName_CorrER"] == df_samples_0["PathName_CorrER"])
+            (
+                df_p_s[f"PathName_Corr{channels[0]}"]
+                == df_samples_0[f"PathName_Corr{channels[0]}"]
+            )
             & (
                 df_p_s["Metadata_Foci_Barcode_MatchedTo_Barcode"]
                 == df_samples_0["Metadata_Foci_Barcode_MatchedTo_Barcode"]
@@ -313,7 +298,6 @@ def extract_neighbor_cells_center(df_p_s, df_samples, max_dist_of_neigh):
             int
         ).tolist()  # +[df_samples_0['Nuclei_Location_Center_Y']]
 
-#         print(df_samples_0["Nuclei_Location_Center_Y"])
         x_cent_ls.remove(df_samples_0["Nuclei_Location_Center_X"].astype(int))
         y_cent_ls.remove(df_samples_0["Nuclei_Location_Center_Y"].astype(int))
 

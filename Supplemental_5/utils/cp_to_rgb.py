@@ -24,10 +24,6 @@ def CP_to_RGB_single(im_cp, channels):
     import matplotlib.colors as mcolors
 
     depth = 65535
-    # channels_colormap= {'DAPI':'Blue', 'ER'=Green, 'RNA'=Yellow, 'AGP':Red (or orange) 'Mito' = Magenta (or red)
-    #     channels_colormap= {'DNA':'Blue', 'ER':'Green', 'RNA':'Yellow', 'AGP':'Red', 'Mito':'Magenta',\
-    #                        'DAPI':'Blue'}
-
     channels_colormap = {
         "DNA": "Blue",
         "ER": "Green",
@@ -39,13 +35,10 @@ def CP_to_RGB_single(im_cp, channels):
         "Phalloidin": "Yellow",
     }
 
-    #     channels = ["DNA", "Mito", "Phalloidin", "WGA", "ER"]
     channel_colors = [
         np.array(mcolors.to_rgb(channels_colormap[c])) * depth for c in channels
     ]
 
-    #     comb_pars=[3,2,3,2,2]
-    #     comb_pars=[.1,.1,.1,.1,.1]
     comb_pars = [1 / im_cp.shape[2]] * im_cp.shape[2]
     colorImagesList = []
     for i in range(im_cp.shape[2]):
@@ -55,7 +48,6 @@ def CP_to_RGB_single(im_cp, channels):
             * channel_colors[i]
             * comb_pars[i]
         )
-        #         print('max',image_color.max(),image_gray.max(),image_color.shape)
         colorImagesList.append(image_color)
 
     colorImage0 = sum(colorImagesList)  # .astype(np.uint8)
