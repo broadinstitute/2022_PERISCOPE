@@ -1,4 +1,8 @@
-This notebook generates the analysis and figure described in Figure 4.
+This notebook generates the analysis and figure described in Supplemental Figure 8.
+
+This notebook requires ~15 minutes computation time for a normal desktop computer on a genome-scale dataset.
+
+## Before running this notebook
 
 Before running this notebook, you will need to run the [Profile_Aggregation]('../Profile_Aggregation/profile_aggregation.ipynb') notebook which will create the gene-level aggregated profiles used in generating this figure.
 Alternatively, you can directly download the files using the following commands:
@@ -16,6 +20,8 @@ If you would like to skip running Hit Calling, you can directly download the out
 ```bash
 aws s3 cp --recursive --no-sign-request s3://cellpainting-gallery/cpg0021-periscope/broad/workspace/publication_data/2022_PERISCOPE ../outputs/ --exclude "*" --include "*_mann_whitney_*"
 ```
+
+## Other inputs
 
 The other file used in generating this data is included in the repository and is `CCLE_expression_A549_HeLa.csv`. 
 Details of this file are explained in the [README.md for Hit Calling](../Hit_Calling/README.md).

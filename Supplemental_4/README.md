@@ -1,5 +1,7 @@
 This notebook generates the analysis and figure described in this Supplementary Figure.
 
+This notebook requires ~15 minutes computation time for a normal desktop computer on a genome-scale dataset.
+
 ## Before running this notebook
 
 Before running this notebook, you will need to run the [Hit_Calling](../Hit_Calling/per_feature_hit_calling.ipynb) notebook which will calculate p-values for each feature.

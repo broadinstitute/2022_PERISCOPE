@@ -2,7 +2,7 @@
 This repository contains all supporting analyses and files for Ramezani, Bauman, Singh, and Weisbart, et al. "A genome-wide atlas of human cell morphology".
 It also includes download information for the images and profiles used in the analysis.
 It is currently under review for publication.
-It is available as a preprint at [LINK COMING SOON!]
+It is available as a preprint on [bioRxiv](https://www.biorxiv.org/content/10.1101/2023.08.06.552164v1).
 
 ## Authors
 Meraj Ramezani*, Julia Bauman*, Avtar Singh*, Erin Weisbart*, John Yong, Maria Lozada, Greg P. Way, Sanam L. Kavari, Celeste Diaz, Marzieh Haghighi, Thiago M. Batista, Joaquín Pérez-Schindler, Melina Claussnitzer, Shantanu Singh, Beth A. Cimini, Paul C. Blainey‡, Anne E. Carpenter‡, Calvin H. Jan‡, James T. Neal‡
@@ -35,6 +35,8 @@ conda env create --force --file environment.yml
 conda activate periscope_2022
 ```
 
+Expected install time for the computational environment is less than 10 minutes.
+
 ## Replicating our workflow
 
 All of our data is publicly available so that our entire workflow can be replicated.
@@ -43,10 +45,13 @@ To address this, we have provided many intermediate files.
 Input images, intermediate processed images, and the final images used for analysis are available as described in [Downloading images](#downloading-images).
 Input profiles, intermediate processed profiles, and the final profiles used for analysis are available as described in [Downloading profiles](#downloading-profiles).
 
+Final profile aggregation, hit calling, and all biological discovery described in the paper are performed in Jupyter notebooks provided in this repository.
 Each folder in this repository contains the input files used, logical intermediates generated, and/or a README file describing how to download any that are too large for the repository.
 
 We have described a minimal example you can use, where possible, to practice using our workflow.
 However, it is very important to understand that extracting meaningful biology is only possible at scale so any minimal examples are to be used for technical but not biological understanding.
+
+Our workflow should be able to be replicated on any operating system that can run Python and install the dependencies described in our environment.yml and has been tested end-to-end on a Mac operating system and components have been tested on both Windows and Linux operating systems.
 
 ## Downloading data
 

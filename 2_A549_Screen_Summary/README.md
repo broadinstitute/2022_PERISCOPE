@@ -1,5 +1,7 @@
 This notebook generates the analysis and figure described in Figure 2.
 
+This notebook requires ~30 minutes computation time for a normal desktop computer on a genome-scale dataset.
+
 ## Before running this notebook
 
 Before running this notebook, you will need to run the [Profile_Aggregation]('../Profile_Aggregation/profile_aggregation.ipynb') notebook which will create the guide and gene-level aggregated profiles used in generating this figure.

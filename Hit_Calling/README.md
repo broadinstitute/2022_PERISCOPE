@@ -1,5 +1,7 @@
 This notebook inputs profiles and generates "hit lists" of genes that show significant perturbation either to their entire profile or features coming from a single channel.
 
+This notebook requires hours to days of computation time for a normal desktop computer on a genome-scale dataset.
+
 ## Inputs
 
 To run this notebook you will first need to run [Profile_Aggregation](../Profile_Aggregation) which generates the following profiles that are used as inputs for this notebook:

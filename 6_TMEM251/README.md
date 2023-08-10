@@ -1,4 +1,8 @@
-This notebook generates some of the analysis described in Figure 7.
+This notebook generates some of the analysis described in Figure 6.
+
+This notebook requires ~10 minutes computation time for a normal desktop computer on a genome-scale dataset.
+
+## Before running this notebook
 
 Before running this notebook, you will need to run the [Profile_Aggregation](Profile_Aggregation) notebook which will create the gene-level aggregated profiles used in generating this figure. Alternatively, you can directly download the file using the following commands:
 

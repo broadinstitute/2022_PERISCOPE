@@ -1,4 +1,8 @@
-This notebook generates the analysis and figure described in Figure 2.
+This notebook generates the analysis and figure described in Figure 3.
+
+This notebook requires ~30 minutes computation time for a normal desktop computer on a genome-scale dataset.
+
+## Before running this notebook
 
 To run this notebook you will first need to run [Profile_Aggregation](../Profile_Aggregation) which generates the following profiles that are used as inputs for this notebook:
 `20210422_6W_CP257_guide_normalized_feature_select_median_merged_ALLBATCHES___DMEM___ALLWELLS_gene_aggregated.csv.gz`  
@@ -17,6 +21,8 @@ If you would like to skip running Hit Calling, you can directly download the out
 ```bash
 aws s3 cp --recursive --no-sign-request s3://cellpainting-gallery/cpg0021-periscope/broad/workspace/publication_data/2022_PERISCOPE ../Hit_Calling/outputs/ --exclude "*" --include "*_mann_whitney_*"
 ```
+
+## Other inputs
 
 CORUM data was downloaded from http://mips.helmholtz-muenchen.de/corum/#download using [this link](http://mips.helmholtz-muenchen.de/corum/download/releases/current/humanComplexes.txt.zip). We accessed "Human complexes: A set of all annotated human protein complexes" on 2022/12/15.
 It is in the [inputs](inputs) folder and named `CORUM_humanComplexes.txt`.

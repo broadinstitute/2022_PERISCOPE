@@ -1,4 +1,6 @@
-These notebook generates the analysis and figure described in this Supplementary Figure.
+This notebook generates the analysis and figures described in Supplementary Figures 2, 6, and 7.
+
+This notebook requires ~15 minutes computation time for a normal desktop computer on a genome-scale dataset.
 
 ## Before running this notebook
 
