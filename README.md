@@ -197,7 +197,7 @@ aws s3 cp \
 
 #### `single cell profiles`
 
-The HeLa dataset has the additional resource of single cell profiles, available on a per-plate or per-guide basis.
+The datasets also have the additional resource of single cell profiles, available on a per-plate or per-guide basis.
 
 Download per-plate single cell profiles using the following command.
 ```bash
