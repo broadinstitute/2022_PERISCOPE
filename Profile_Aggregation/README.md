@@ -6,12 +6,38 @@ This notebook requires several hours of computation time for a normal desktop co
 
 To run the notebooks you will need to download the following files to the `inputs_data` folder.
 `20210422_6W_CP257_guide_normalized_ALLBATCHES___{plate}___ALLWELLS.csv.gz` for all HeLa plates ['CP257A','CP257B','CP257D','CP257F','CP257H','CP257J','CP257K','CP257L','CP257N'].
-`20210422_6W_CP257_guide_normalized_ALLBATCHES___{plate}___ALLWELLS.csv.gz` for all A549 plates ['CP186','CP186B','CP186C','CP186D','CP186E','CP186F','CP186G','CP186H','CP186N'].
+`20210422_6W_CP257_guide_normalized_ALLBATCHES___{plate}___ALLWELLS.csv.gz` for all A549 plates ['CP186A','CP186B','CP186C','CP186D','CP186E','CP186F','CP186G','CP186H','CP186N'].
 
-The following command will download these files:
+The following command will download these files, though it may run slowly as it will list the whole folder which includes many files:
 ```bash
-aws s3 cp --recursive --no-sign-request s3://cellpainting-gallery/cpg0021-periscope/broad/workspace/profiles/ inputs --exclude "*" --include "20210422_6W_CP257_guide_normalized_ALLBATCHES___*" --include "20200805_A549_WG_Screen_guide_normalized_ALLBATCHES___*"
+aws s3 cp --recursive --no-sign-request s3://cellpainting-gallery/cpg0021-periscope/broad/workspace/profiles/ inputs --exclude "*" --include "*20210422_6W_CP257_guide_normalized_ALLBATCHES___*" --include "*20200805_A549_WG_Screen_guide_normalized_ALLBATCHES___*"
 ```
+
+You can instead use the following list of commands which will download each file without listing the folder:
+<details>
+<summary>Click for commands</summary>
+
+```bash
+aws s3 cp --no-sign-request s3://cellpainting-gallery/cpg0021-periscope/broad/workspace/profiles/A549/20200805_A549_WG_Screen_guide_normalized_ALLBATCHES___CP186A___ALLWELLS.csv.gz inputs/
+aws s3 cp --no-sign-request s3://cellpainting-gallery/cpg0021-periscope/broad/workspace/profiles/A549/20200805_A549_WG_Screen_guide_normalized_ALLBATCHES___CP186B___ALLWELLS.csv.gz inputs/
+aws s3 cp --no-sign-request s3://cellpainting-gallery/cpg0021-periscope/broad/workspace/profiles/A549/20200805_A549_WG_Screen_guide_normalized_ALLBATCHES___CP186C___ALLWELLS.csv.gz inputs/
+aws s3 cp --no-sign-request s3://cellpainting-gallery/cpg0021-periscope/broad/workspace/profiles/A549/20200805_A549_WG_Screen_guide_normalized_ALLBATCHES___CP186D___ALLWELLS.csv.gz inputs/
+aws s3 cp --no-sign-request s3://cellpainting-gallery/cpg0021-periscope/broad/workspace/profiles/A549/20200805_A549_WG_Screen_guide_normalized_ALLBATCHES___CP186E___ALLWELLS.csv.gz inputs/
+aws s3 cp --no-sign-request s3://cellpainting-gallery/cpg0021-periscope/broad/workspace/profiles/A549/20200805_A549_WG_Screen_guide_normalized_ALLBATCHES___CP186F___ALLWELLS.csv.gz inputs/
+aws s3 cp --no-sign-request s3://cellpainting-gallery/cpg0021-periscope/broad/workspace/profiles/A549/20200805_A549_WG_Screen_guide_normalized_ALLBATCHES___CP186G___ALLWELLS.csv.gz inputs/
+aws s3 cp --no-sign-request s3://cellpainting-gallery/cpg0021-periscope/broad/workspace/profiles/A549/20200805_A549_WG_Screen_guide_normalized_ALLBATCHES___CP186H___ALLWELLS.csv.gz inputs/
+aws s3 cp --no-sign-request s3://cellpainting-gallery/cpg0021-periscope/broad/workspace/profiles/A549/20200805_A549_WG_Screen_guide_normalized_ALLBATCHES___CP186N___ALLWELLS.csv.gz inputs/
+aws s3 cp --no-sign-request s3://cellpainting-gallery/cpg0021-periscope/broad/workspace/profiles/HeLa/20210422_6W_CP257_guide_normalized_ALLBATCHES___CP257A___ALLWELLS.csv.gz inputs/
+aws s3 cp --no-sign-request s3://cellpainting-gallery/cpg0021-periscope/broad/workspace/profiles/HeLa/20210422_6W_CP257_guide_normalized_ALLBATCHES___CP257B___ALLWELLS.csv.gz inputs/
+aws s3 cp --no-sign-request s3://cellpainting-gallery/cpg0021-periscope/broad/workspace/profiles/HeLa/20210422_6W_CP257_guide_normalized_ALLBATCHES___CP257D___ALLWELLS.csv.gz inputs/
+aws s3 cp --no-sign-request s3://cellpainting-gallery/cpg0021-periscope/broad/workspace/profiles/HeLa/20210422_6W_CP257_guide_normalized_ALLBATCHES___CP257F___ALLWELLS.csv.gz inputs/
+aws s3 cp --no-sign-request s3://cellpainting-gallery/cpg0021-periscope/broad/workspace/profiles/HeLa/20210422_6W_CP257_guide_normalized_ALLBATCHES___CP257H___ALLWELLS.csv.gz inputs/
+aws s3 cp --no-sign-request s3://cellpainting-gallery/cpg0021-periscope/broad/workspace/profiles/HeLa/20210422_6W_CP257_guide_normalized_ALLBATCHES___CP257J___ALLWELLS.csv.gz inputs/
+aws s3 cp --no-sign-request s3://cellpainting-gallery/cpg0021-periscope/broad/workspace/profiles/HeLa/20210422_6W_CP257_guide_normalized_ALLBATCHES___CP257K___ALLWELLS.csv.gz inputs/
+aws s3 cp --no-sign-request s3://cellpainting-gallery/cpg0021-periscope/broad/workspace/profiles/HeLa/20210422_6W_CP257_guide_normalized_ALLBATCHES___CP257L___ALLWELLS.csv.gz inputs/
+aws s3 cp --no-sign-request s3://cellpainting-gallery/cpg0021-periscope/broad/workspace/profiles/HeLa/20210422_6W_CP257_guide_normalized_ALLBATCHES___CP257N___ALLWELLS.csv.gz inputs/
+```
+</details>
 
 These are the guide-level profiles generated by `Plate level aggregation` in the first part of this notebook:
 `20200805_A549_WG_Screen_guide_normalized_feature_select_median_merged_ALLBATCHES___CP186___ALLWELLS.csv.gz`  
