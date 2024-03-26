@@ -52,7 +52,7 @@ This notebook generates the following statistical descriptions of the significan
 
 If you would like to skip running this notebook, you can directly download the outputs with the following command:
 ```bash
-aws s3 cp --recursive --no-sign-request s3://cellpainting-gallery/cpg0021-periscope/broad/workspace/publication_data/2022_PERISCOPE ../outputs/ --exclude "*" --include "*_mann_whitney_*"
+aws s3 cp --recursive --no-sign-request s3://cellpainting-gallery/cpg0021-periscope/broad/workspace/publication_data/2022_PERISCOPE outputs/ --exclude "*" --include "*_mann_whitney_*"
 ```
 
 This notebook also generates a per-cell line summary of the how the CCLE expression data maps to our data that is used as an input to other notebooks.
