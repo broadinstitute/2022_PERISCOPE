@@ -51,5 +51,5 @@ These are the gene-level profiles generate by `Gene level aggregation` in the se
 
 To skip running all aggregation locally, you can directly download the output files using the following command:
 ```bash
-aws s3 cp --recursive --no-sign-request s3://cellpainting-gallery/cpg0021-periscope/broad/workspace/profiles/ outputs --exclude "*" --include "20210422_6W_CP257_guide_normalized_feature_select_median_merged_ALLBATCHES___*" --include "20200805_A549_WG_Screen_guide_normalized_feature_select_median_merged_ALLBATCHES___*"
+aws s3 cp --recursive --no-sign-request s3://cellpainting-gallery/cpg0021-periscope/broad/workspace/profiles/ outputs --exclude "*" --include "*/20210422_6W_CP257_guide_normalized_feature_select_median_merged_ALLBATCHES___*" --include "*/20200805_A549_WG_Screen_guide_normalized_feature_select_median_merged_ALLBATCHES___*"
 ```
