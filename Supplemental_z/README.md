@@ -4,3 +4,11 @@
 
 To run the full notebook, you will need to download the single-cell data from Funk et al. 2022, available at Harvard Dataverse: https://doi.org/10.7910/DVN/VYKTI5.
 The single cell data is ~300 GB so we have not included it in our data inputs in this repository.
+
+## Outputs
+
+The `Funk_et_al_2022_data_subsample_aggregated_{n}_cells.csv` outputs are stored in the Cell Painting Gallery instead of in this Github repository.
+The following command will download the files:
+"""bash
+aws s3 cp s3://cellpainting-gallery/cpg0021-periscope/broad/workspace/publication_data/2022_PERISCOPE/ outputs/ --recursive --exclude "*" --include "Funk_et_al_2022_subsample_aggregated" --no-sign-request
+"""
