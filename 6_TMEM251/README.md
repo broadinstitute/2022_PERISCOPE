@@ -1,3 +1,5 @@
+# Figure 6
+
 This notebook generates some of the analysis described in Figure 6.
 
 This notebook requires ~10 minutes computation time for a normal desktop computer on a genome-scale dataset.

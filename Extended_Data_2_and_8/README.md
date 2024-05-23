@@ -19,8 +19,12 @@ All individual figure panels as generated for the manuscript are output to [outp
 
 The metadata from single cell profiles are aggregated on a per-plate basis for HeLa and A549 screens.
 Additionally, the per-plate metadata is aggregated per-experiment for HeLa_DMEM, HeLa_HPLM, and A549 screens.
-The per-plate aggregated files can be downloaded with the following command:
+The single cell metadata files can be downloaded with the following commands:
 
 ```bash
+# For per-experiment aggregated data
 aws s3 cp --recursive --no-sign-request s3://cellpainting-gallery/cpg0021-periscope/broad/workspace/publication_data/2022_PERISCOPE/ outputs/ --exclude "*" --include "*single_cell_metadata.csv.gz"
+
+# For per-plate data
+aws s3 cp --recursive --no-sign-request s3://cellpainting-gallery/cpg0021-periscope/broad/workspace/publication_data/2022_PERISCOPE/ outputs/ --exclude "*" --include "*single_cell_metadata_CP*"
 ```
