@@ -57,6 +57,8 @@ def extract_single_cell_samples(
             n_cells_in_each_cluster_unif = 30
         else:
             n_cells_in_each_cluster_unif = int(df_p_s.shape[0] / 5)
+            if n_cells_in_each_cluster_unif == 0:
+                return (pd.DataFrame, False)
 
         n_clusts = int(df_p_s.shape[0] / n_cells_in_each_cluster_unif)
         kmeans = KMeans(n_clusters=n_clusts, n_init=10).fit(
