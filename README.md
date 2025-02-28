@@ -1,11 +1,11 @@
 # 2022_Ramezani_Bauman_Singh_Weisbart_PERISCOPE
-This repository contains all supporting analyses and files for Ramezani, Bauman, Singh, and Weisbart, et al. "A genome-wide atlas of human cell morphology".
+This repository contains all supporting analyses and files for Ramezani, Weisbart, Bauman, and Singh, et al. "A genome-wide atlas of human cell morphology".
 It also includes download information for the images and profiles used in the analysis.
-It is currently under review for publication.
-It is available as a preprint on [bioRxiv](https://www.biorxiv.org/content/10.1101/2023.08.06.552164v1).
+It was published in [Nature Methods in 2025](https://doi.org/10.1038/s41592-024-02537-7).
+It is also available as a preprint on [bioRxiv](https://www.biorxiv.org/content/10.1101/2023.08.06.552164v1).
 
 ## Authors
-Meraj Ramezani*, Julia Bauman*, Avtar Singh*, Erin Weisbart*, John Yong, Maria Lozada, Greg P. Way, Sanam L. Kavari, Celeste Diaz, Marzieh Haghighi, Thiago M. Batista, Joaquín Pérez-Schindler, Melina Claussnitzer, Shantanu Singh, Beth A. Cimini, Paul C. Blainey‡, Anne E. Carpenter‡, Calvin H. Jan‡, James T. Neal‡
+Meraj Ramezani*, Erin Weisbart*, Julia Bauman*, Avtar Singh*,  John Yong, Maria Lozada, Gregory P. Way, Sanam L. Kavari, Celeste Diaz, Eddy Leardinin, Gunjan Jetley, Jenlu Pagnotta, Marzieh Haghighi, Thiago M. Batista, Joaquín Pérez-Schindler, Melina Claussnitzer, Shantanu Singh, Beth A. Cimini, Paul C. Blainey‡, Anne E. Carpenter‡, Calvin H. Jan‡, James T. Neal‡
 *equal contribution
 ‡co-senior authors
 
