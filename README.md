@@ -1,4 +1,4 @@
-# 2022_Ramezani_Bauman_Singh_Weisbart_PERISCOPE
+# A genome-wide atlas of human cell morphology
 This repository contains all supporting analyses and files for Ramezani, Weisbart, Bauman, and Singh, et al. "A genome-wide atlas of human cell morphology".
 It also includes download information for the images and profiles used in the analysis.
 It was published in [Nature Methods in 2025](https://doi.org/10.1038/s41592-024-02537-7).
