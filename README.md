@@ -221,3 +221,23 @@ aws s3 cp \
   --exclude "*"
   --include "*${guide}*"
 ```
+
+## Querying Hit Lists
+
+If you would like to query your gene of interest to see if it was called as a hit in our screens by our hit-calling methods, you can search in browser in this repository in the following tables:
+
+1% False Discovery Rate (as described in publication) \
+[A549 whole profile hits](4_A549_Screen_Summary/outputs/A549_plate_level_median_per_feat_sig_genes_1_FDR_whole_cell_hits.csv) \
+[A549 compartment specific hits](4_A549_Screen_Summary/outputs/A549_plate_level_median_per_feat_sig_genes_1_FDR_compartment_specific_hits.csv) \
+[HeLa DMEM whole profile hits](2_HeLa_Screens_Summary/outputs/HeLa_DMEM_plate_level_median_per_feat_sig_genes_1_FDR_whole_cell_hits.csv) \
+[HeLa DMEM compartment specific hits](2_HeLa_Screens_Summary/outputs/HeLa_DMEM_plate_level_median_per_feat_sig_genes_1_FDR_compartment_specific_hits.csv) \
+[HeLa HPLM whole profile hits](2_HeLa_Screens_Summary/outputs/HeLa_HPLM_plate_level_median_per_feat_sig_genes_1_FDR_whole_cell_hits.csv) \
+[HeLa HPLM compartment specific hits](2_HeLa_Screens_Summary/outputs/HeLa_HPLM_plate_level_median_per_feat_sig_genes_1_FDR_compartment_specific_hits.csv)
+
+5% False Discovery Rate (less stringent cutoff than publication) \
+[A549 whole profile hits](https://github.com/broadinstitute/2022_PERISCOPE/blob/1839a766b8c75c3e3921f1186058826653274aa3/2_A549_Screen_Summary/outputs/A549_plate_level_median_per_feat_sig_genes_5_fdr_whole_cell_hits.csv) \
+[A549 compartment specific hits](https://github.com/broadinstitute/2022_PERISCOPE/blob/1839a766b8c75c3e3921f1186058826653274aa3/2_A549_Screen_Summary/outputs/A549_plate_level_median_per_feat_sig_genes_5_fdr_compartment_specific_hits.csv) \
+[HeLa DMEM whole profile hits](https://github.com/broadinstitute/2022_PERISCOPE/blob/1839a766b8c75c3e3921f1186058826653274aa3/3_HeLa_Screens_Summary/outputs/HeLa_DMEM_plate_level_median_per_feat_sig_genes_5_fdr_whole_cell_hits.csv) \
+[HeLa DMEM compartment specific hits](https://github.com/broadinstitute/2022_PERISCOPE/blob/1839a766b8c75c3e3921f1186058826653274aa3/3_HeLa_Screens_Summary/outputs/HeLa_DMEM_plate_level_median_per_feat_sig_genes_5_fdr_compartment_specific_hits.csv) \
+[HeLa HPLM whole profile hits](https://github.com/broadinstitute/2022_PERISCOPE/blob/1839a766b8c75c3e3921f1186058826653274aa3/3_HeLa_Screens_Summary/outputs/HeLa_HPLM_plate_level_median_per_feat_sig_genes_5_fdr_whole_cell_hits.csv) \
+[HeLa HPLM compartment specific hits](https://github.com/broadinstitute/2022_PERISCOPE/blob/1839a766b8c75c3e3921f1186058826653274aa3/3_HeLa_Screens_Summary/outputs/HeLa_HPLM_plate_level_median_per_feat_sig_genes_5_fdr_compartment_specific_hits.csv)
