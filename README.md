@@ -58,12 +58,12 @@ Our workflow should be able to be replicated on any operating system that can ru
 Cell Painting images and profiles are available at the Cell Painting Gallery on the Registry of Open Data on AWS (https://registry.opendata.aws/cellpainting-gallery/) under accession number `cpg0021-periscope`.
 Detailed download and file organization information for the Cell Painting Gallery are available at https://github.com/broadinstitute/cellpainting-gallery.
 
-A549 data is labeled as batch `20200805_A549_WG_Screen` and may also be referred to as `CP186` in some file names.
+**A549** data is labeled as batch `20200805_A549_WG_Screen` and may also be referred to as `CP186` in some file names.
 
-HeLa data is labeled as batch `20210422_HeLa_WG_Screen` and may also be referred to a `CP257` in some file names.
-DMEM and HPLM conditions were separated by plate.
-DMEM plates are 'CP257A','CP257B','CP257D','CP257F', and 'CP257H'.
-HPLM_plates are 'CP257J','CP257K','CP257L', and 'CP257N'.
+**HeLa** data is labeled as batch `20210422_HeLa_WG_Screen` and may also be referred to as `20210422_6W_CP257` or `CP257` in some file names.
+DMEM and HPLM conditions were separated by plate. \
+DMEM plates are `CP257A`,`CP257B`,`CP257D`,`CP257F`, and `CP257H`. \
+HPLM_plates are `CP257J`,`CP257K`,`CP257L`, and `CP257N`. \
 
 ### Downloading images
 
